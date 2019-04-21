@@ -9,9 +9,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
+            <a class="navbar-brand" href="{{ "/" | relLangURL }}">{{ .Site.Params.blogEnglishName }}</a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <!-- Known Issue, found by Hux:
             <nav>'s height woule be hold on by its content.
@@ -22,13 +21,8 @@
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="{{ "/" | relLangURL }}">Home</a>
+                        <a href="{{ "/" | relLangURL }}">首页</a>
                     </li>
-                    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                    <li>
-                        <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
-                    </li>
-                    {{ end }}
                     
 		    {{ range .Site.Params.addtional_menus }}
                         <li><a href="{{.href | relLangURL}}">{{.title}}</a></li>

@@ -1,4 +1,5 @@
 {{ define "header" }}
+
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header {
@@ -62,7 +63,6 @@
                 {{ if .Site.Params.reward }}
                 {{ partial "reward.html" . }}
                 {{ end }}
-
                 <hr>
                 <ul class="pager">
                     {{ if .PrevInSection }}
@@ -105,7 +105,7 @@
                     </div>
                 </section>
                 {{ end }}
-
+                
                 <!-- Friends Blog -->
                 {{ if .Site.Params.friends }}
                 <section>

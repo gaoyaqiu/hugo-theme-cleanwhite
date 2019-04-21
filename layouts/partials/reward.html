@@ -1,23 +1,15 @@
-
+{{ if or .Params.reward (and .Site.Params.reward (ne .Params.reward false)) }}
 <div class="entry-shang text-center">
-    {{ if .Site.Params.reward_guide }}
-	    <p> 「{{ .Site.Params.reward_guide }}」</p>
-	{{ else }}
-	    <p>「真诚赞赏，手留余香」</p>
-	{{ end }}
-	<button class="zs show-zs btn btn-bred">赞赏支持</button>
+	<p>「{{ .Site.Params.reward_guide }}」</p>
+	<button class="zs show-zs btn btn-bred">赞赏</button>
 </div>
 <div class="zs-modal-bg"></div>
 <div class="zs-modal-box">
 	<div class="zs-modal-head">
 		<button type="button" class="close">×</button>
-		<span class="author"><a href="{{ .Site.BaseURL }}"><img src="{{ "img/favicon.png" | relURL}}" />{{ .Site.Title }}</a></span>
-        {{ if .Site.Params.reward_guide }}
-	        <p class="tip"><i></i><span>{{ .Site.Params.reward_guide }}</span></p>
-		{{ else }}
-	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
-		{{ end }}
- 
+		<span class="author">Gao Yaqiu</span>
+		<p class="tip"><i></i><span>{{ .Site.Params.reward_guide }}</span></p>
+
 	</div>
 	<div class="zs-modal-body">
 		<div class="zs-modal-btns">
@@ -31,12 +23,14 @@
 		<div class="zs-modal-pay">
 			<button class="btn btn-bred" id="pay-text">2元</button>
 			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
-			<img src="{{ "img/reward/wechat-2.png" | relURL }}"  id="pay-image"/>
+			<img src="/img/alipay-2.png" id="pay-image"/>
 		</div>
-	</div>
+    </div>
 	<div class="zs-modal-footer">
-		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="{{ "img/reward/wechat-btn.png" | relURL }}"/></span></label>
-		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="{{ "img/reward/alipay-btn.png" | relURL }}"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" checked="checked"><span class="zs-alipay"><img src="/img/alipay-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="wechat" ><span class="zs-wechat"><img src="/img/wechat-btn.png"/></span></label>
 	</div>
 </div>
-<script type="text/javascript" src="{{ "js/reward.js" | relURL }}"></script>
+<script src="/js/reward.js"></script>
+    
+{{- end }}

@@ -1,3 +1,8 @@
+body{
+    font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+}
+p{margin-bottom: 10px; line-height: 1.5;}
 
 .btn {
     display: inline-block;
@@ -33,7 +38,7 @@ button.close {
     border: 0
 }
 .entry-shang {
-    padding: 30px 0 20px;
+    padding: 0px 0 15px;
     text-align: center;
 }
 
@@ -43,8 +48,8 @@ button.close {
 
 .btn-bred {
     min-width: 80px;
-    border-color: #e26d6d;
-    background: #e26d6d;
+    border-color: #38a7bb;
+    background: #38a7bb;
     color: #fff;
 }
 
@@ -56,7 +61,6 @@ button.close {
     height: 100%;
     background: rgba(0,0,0,0.2);
     display: none;
-    z-index: 100;
 }
 
 .zs-modal-box {
@@ -150,8 +154,8 @@ button.close {
 
 .zs-modal-btns .btn-blink {
     background: #fff;
-    border-color: #e26d6d;
-    color: #e26d6d;
+    border-color: #38a7bb;
+    color: #38a7bb;
     font-weight: bold;
 }
 
@@ -161,8 +165,8 @@ button.close {
 }
 
 .zs-modal-btns .btn-blink:focus {
-    background: #e26d6d;
-    border-color: #e26d6d;
+    background: #38a7bb;
+    border-color: #38a7bb;
     color: #fff;
 }
 
@@ -190,3 +194,19 @@ button.close {
     padding: 15px 0;
     display: none;
 }
+
+input[type="radio"]{
+    content: "\a0";
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    width: 1em;
+    height: 1em;
+    margin-right: .4em;
+    border-radius: 50%;
+    border: 1px solid #01cd78;
+    text-indent: .15em;
+    background-color: #01cd78;
+    line-height: 1; 
+}
+
