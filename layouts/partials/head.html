@@ -50,7 +50,7 @@
 
     <link rel="canonical" href="{{ .URL | relURL }}">
 
-    <link rel="stylesheet" href="{{ "css/iDisqus.min.css" | relURL }}" />
+    <!-- <link rel="stylesheet" href="{{ "css/iDisqus.min.css" | relURL }}" /> -->
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | relURL }}">
@@ -59,7 +59,7 @@
     <link rel="stylesheet" href="{{ "css/hux-blog.min.css" | relURL }}">
 
     <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}">
+    <!-- <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}"> -->
 
     <!-- zangshang CSS -->
     <link rel="stylesheet" href="{{ "css/zanshang.css" | relURL }}">
@@ -80,10 +80,14 @@
     <script src="{{ "js/hux-blog.min.js" | relURL }}"></script>
 
     <!-- Use the docco color scheme of highlight.js to highlight the code in the page -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/docco.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/monokai.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.5.0/highlightjs-line-numbers.min.js"></script>
+
     <script>
         hljs.initHighlightingOnLoad();
+        // 行号插件
+		hljs.initLineNumbersOnLoad();
     </script>
     <script type="text/javascript">
         $(function () {
